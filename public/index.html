@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Loading</title>
+	
+	<meta property="og:title" content="Zypher" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Zypher the, sleek, fast, and secure web proxy." />
+	<meta name="theme-color" content="#101010">
+
+	<link rel="icon" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+
+	<script src="js/index.js" type="module" defer></script>
+	<script src="js/protect.js"></script>
+	<script src="js/themes.js" defer></script>
+</head>
+
+<body>
+	<script src="/api/bare.js"></script>
+	<script src="/uv/uv.bundle.js"></script>
+	<script src="/uv/uv.config.js"></script>
+
+	<div class="content">
+		
+		<div class="sidebar" id="active">
+			<div class="siteitem">
+				<div class="item" data-redirect="/home.html">
+					<p>Z</p>
+				</div>
+
+				<div class="item" data-redirect="/explore.html">
+					<img src="images/explore.png">
+				</div>
+
+				<div class="item" data-redirect="/internal/browser/index.html">
+					<img src="images/web.png">
+				</div>
+
+				<div class="item" data-redirect="/proxy.html">
+					<img src="images/search.png">
+				</div>
+
+				<div class="item" data-redirect="/settings.html">
+					<img src="images/settings.png">
+				</div>
+			</div>
+		</div>
+
+		<iframe class="mainnav" src="home.html" frameborder="0"></iframe>
+
+	</div>
+</body>
+
+</html>

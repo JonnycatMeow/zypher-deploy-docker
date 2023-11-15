@@ -1,0 +1,98 @@
+@import url("./root.css");
+
+.buttons {
+	margin-top: 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 640;
+	user-select: none;
+	width: 15vw; height: 6vw;
+	background: var(--sidebar-color);
+	border: 5px solid var(--sidebar-border); border-radius: 20px;
+	font-size: max(1.5vw, 16px);
+}
+
+.button img {
+	width: 2.5vw; height: 2.5vw;
+	margin-left: 1.5vw;
+}
+
+.button.game:not(.button.game:nth-child(1)) {
+	margin-left: 3vw;
+}
+
+.button.setting {
+	text-align: center;
+	width: 20vw; height: 9vw;
+	margin-left: 0px;
+}
+
+.button.setting:not(.button.setting:nth-child(1)) {
+	margin-left: 3vw;
+}
+
+.button.setting {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+}
+
+.button.setting select {
+	margin-left: 1vw;
+	border: 3px solid var(--sidebar-border); border-radius: 20px;
+	background: var(--sidebar-color);
+	color: var(--text-color);
+	font-family: var(--text-font); font-weight: 600;
+	height: 3vw;
+	text-align-last: center;
+}
+
+.button.setting select option {
+	display: flex;
+	justify-content: center;
+	font-weight: 600;
+}
+
+.button.input {
+	width: 30vw; height: 6vw;
+}
+
+.button.input input {
+	text-align: center;
+	width: 100%; height: 67%;
+	background: none;
+	border: none;
+	color: var(--text-color);
+	font-family: var(--text-font);
+	font-size: 1.5vw;
+	font-weight: bold;
+}
+
+.button.input input::placeholder {
+	color: var(--text-color);
+	font-size: 1.5vw;
+	font-weight: bolder;
+}
+
+.button.input input:focus {
+	outline: none; border: none;
+}
+
+.button:hover {
+	cursor: pointer;
+	filter: brightness(150%);
+}
+
+.button.input:hover {
+	cursor: auto;
+	filter: none;
+}

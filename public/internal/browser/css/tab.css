@@ -1,0 +1,103 @@
+@import url("./root.css");
+
+@keyframes tabLoad {
+	0% {
+		opacity: 0;
+		transform: translateX(-12vw);
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes tabUnload {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(-12vw);
+		opacity: 0;
+	}
+}
+
+.tabs .tab {
+	font-size: 1.3vw;
+	animation: tabLoad 0.75s;
+	font-weight: 500;
+	transition: background 0.25s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(var(--tabs) * 12vw); height: 80%;
+	background: var(--tab-color);
+	border: none; border-radius: 7px;
+	user-select: none;
+	cursor: pointer;
+}
+
+.tabs .tab#remove {
+	animation: tabUnload 0.55s;
+}
+
+.tabs .tab#active {
+	background: var(--tab-active);
+}
+
+.tabs .tab .title {
+	margin-left: 1vw;
+}
+
+.tabs .tab img.close {
+	filter: invert(100%);
+	float: right;
+	width: 2vw; height: 2vw;
+	margin-left: 1.5vw;
+	-webkit-user-drag: none;
+  	-khtml-user-drag: none;
+  	-moz-user-drag: none;
+  	-o-user-drag: none;
+  	user-drag: none;
+}
+
+.tabs .tab:not(.tabs .tab:nth-child(1)) {
+	margin-left: calc( ( var(--tabs) * 12vw ) / 9 );
+}
+
+.tabs .tab:hover:not(#active) {
+	background: var(--tab-hover);
+}
+
+.tabs .add {
+	display: flex;
+	align-items: center;
+	filter: invert(100%);
+	margin-bottom: .7vw;
+}
+
+.tabs .add img:hover {
+	transform: rotate(180deg);
+}
+
+.tabs .add img {
+	transition: transform 0.3s ease-in-out;
+	width: 2.5vw; height: 2.5vw;
+	margin-left: 1.5vw;
+	-webkit-user-drag: none;
+  	-khtml-user-drag: none;
+  	-moz-user-drag: none;
+  	-o-user-drag: none;
+  	user-drag: none;
+	cursor: pointer;
+}
